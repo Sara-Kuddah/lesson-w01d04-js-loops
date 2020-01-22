@@ -17,7 +17,9 @@ ANSWER HERE
 ## Print every number from 10 to 0
 
 ```
-ANSWER HERE
+for(i=10;i>=0;i--){
+console.log(i);
+};
 ```
 
 <br>
@@ -25,7 +27,9 @@ ANSWER HERE
 ## Print every number from 4 to -16
 
 ```
-ANSWER HERE
+for(i=4;i>=-16;i--){
+console.log(i);
+};
 ```
 
 <br>
@@ -33,7 +37,9 @@ ANSWER HERE
 ## Print every fifth number from 8 to 41
 
 ```
-ANSWER HERE
+for(i=8;i<=41;i+=5){
+console.log(i);
+};
 ```
 
 <br>
@@ -49,12 +55,32 @@ Paste your answers into this file.
 const numbers = [4, 9, 7, 2, 1, 8];
 
   // your code here
-
+const changeOdd =function(num) { 
+  return  num=num*2;
+}
+const numbers = [4, 9, 7, 2, 1, 8];
+for(let i=0;i<numbers.length;i++){
+    if(numbers[i]%2!==0)
+  numbers[i]=changeOdd(numbers[i]);
+}
 numbers; // => [4, 18, 14, 2, 2, 8]
 ```
 
 2.  Create an array to hold your favorite colors.  For each choice, log to the screen a string like: `My #1 choice is blue.`
 
+```js
+// my code will git the first five colors and print it in the console 
+// and save it into favoriteColors Array 
+const favoriteColors =[];
+for(let i=1;i<=5;i++){
+var person = prompt("My #"+i+" choice is :", "");
+favoriteColors[i-1]=person;
+if (person != null) {
+    console.log( "My #"+i+" choice is :"+person);
+    person=null;
+}
+}
+```
 3.  Create an array of ages.  Loop through and log only the ages that are over 21.
 
 1. Create an array to hold your top five choices of something (music, books, movies, whatever).
